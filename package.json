@@ -1,0 +1,25 @@
+{
+  "name": "export-json-to-csv",
+  "version": "0.0.1",
+  "main": "./js/index.js",
+  "module": "./js/index.mjs",
+  "repository": {
+    "url": "https://github.com/john310897/export-json-to-csv.git"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "json",
+    "csv",
+    "export",
+    "download"
+  ],
+  "author": "john310897",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}

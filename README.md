@@ -34,7 +34,7 @@ const options={
     title:'test file data',
     fileName:'test-export.csv'
 }
-exportCSVFromJSON(dataObj)
+exportCSVFromJSON(options)
 ````
 
 ### Parameters

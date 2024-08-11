@@ -1,26 +1,37 @@
-export function downloadCsv(csv: string, fileName: string) {
-    const blob = new Blob([csv], { type: 'text/csv' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.setAttribute('href', url);
-    link.setAttribute('download', fileName)
-    link.click();
-}
-
+import { getCSVValues, getValidData, downloadCsv } from './helpers'
 export function exportCSVFromJSON(
-    { data, headers, fileName }:
-        { data: any[], headers?: string[], fileName?: string }) {
-    if (data?.length > 0) {
+    params:
+        { title?: string, data: any[], headers?: string[], keys?: string[], fileName?: string }) {
+    params.title = params.title || undefined;
+    params.data = params.data || [];
+    params.headers = params.headers || [];
+    params.keys = params.keys || [];
+    params.fileName = params.fileName || undefined;
+    if (params.data?.length > 0) {
+        console.log(params)
+        const values = getValidData(params)
+        console.log("in getting values", values)
+        const { headers, keys } = values
+        console.log("after getting valid data", headers, keys)
         let csv = ""
-        fileName = fileName ? fileName + '.csv' : 'export.csv'
-        headers = headers ? (headers?.length > 0 ? headers : Object.keys(data[0])): Object.keys(data[0])
-        csv = headers.join(',') + '\n';
-        if (data?.length > 0) {
-            data.forEach(dataObj => {
-                csv += Object.values(dataObj) + '\n'
+        if (params.title) {
+            csv += params.title + '\n'
+        }
+        csv += headers
+        if (params.data?.length > 0) {
+            params.data.forEach(dataObj => {
+                if (keys && keys?.length > 0) {
+                    let tempObj: any = {};
+                    keys.forEach((key: any) => {
+                        tempObj[key] = dataObj[key]
+                    })
+                    csv += getCSVValues(Object.values(tempObj))
+                } else {
+                    csv += getCSVValues(Object.values(dataObj))
+                }
             })
         }
-        return downloadCsv(csv, fileName)
+        return downloadCsv(csv, params.fileName ?? 'export.csv')
     }
     return false
 }

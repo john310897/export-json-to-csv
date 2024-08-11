@@ -1,8 +1,8 @@
 {
   "name": "export-json-to-csv",
   "version": "0.0.1",
-  "main": "./js/index.js",
-  "module": "./js/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "repository": {
     "url": "https://github.com/john310897/export-json-to-csv.git"
   },

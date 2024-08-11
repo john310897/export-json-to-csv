@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/john310897/export-json-to-csv.git#readme",
   "repository": {
     "url": "https://github.com/john310897/export-json-to-csv.git"
   },
@@ -17,7 +19,7 @@
   ],
   "author": "john310897",
   "license": "MIT",
-  "description": "",
+  "description": "The JSON to CSV Converter is a lightweight and efficient npm package designed to seamlessly convert JSON data into CSV format. This tool is particularly useful for developers who need to export or manipulate data in CSV format, a widely accepted standard for data interchange.",
   "devDependencies": {
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"

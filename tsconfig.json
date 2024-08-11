@@ -10,7 +10,7 @@
         "declaration": true,
         "isolatedModules": true,
         "noEmit": true,
-        "outDir": "js"
+        "outDir": "dist"
     },
     "include": [
         "src"

@@ -8,11 +8,8 @@ export function exportCSVFromJSON(
     params.keys = params.keys || [];
     params.fileName = params.fileName || undefined;
     if (params.data?.length > 0) {
-        console.log(params)
         const values = getValidData(params)
-        console.log("in getting values", values)
         const { headers, keys } = values
-        console.log("after getting valid data", headers, keys)
         let csv = ""
         if (params.title) {
             csv += params.title + '\n'

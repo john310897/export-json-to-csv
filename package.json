@@ -1,6 +1,6 @@
 {
   "name": "export-json-to-csv",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -15,7 +15,11 @@
     "json",
     "csv",
     "export",
-    "download"
+    "download",
+    "convert",
+    "react",
+    "angular",
+    "web"
   ],
   "author": "john310897",
   "license": "MIT",

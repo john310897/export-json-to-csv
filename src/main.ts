@@ -1,4 +1,4 @@
-import { getCSVValues, getValidData, downloadCsv } from './helpers'
+import { getCSVValues, getValidData, downloadCsv, getValueByKeys } from './helpers'
 export function exportCSVFromJSON(
     params:
         { title?: string, data: any[], headers?: string[], keys?: string[], fileName?: string }) {
@@ -9,6 +9,9 @@ export function exportCSVFromJSON(
     params.fileName = params.fileName || undefined;
     if (params.data?.length > 0) {
         const values = getValidData(params)
+        if (values?.status === 'error') {
+            return console.error(values?.message)
+        }
         const { headers, keys } = values
         let csv = ""
         if (params.title) {
@@ -20,7 +23,7 @@ export function exportCSVFromJSON(
                 if (keys && keys?.length > 0) {
                     let tempObj: any = {};
                     keys.forEach((key: any) => {
-                        tempObj[key] = dataObj[key]
+                        tempObj[key] = getValueByKeys(key.split('.'), dataObj)
                     })
                     csv += getCSVValues(Object.values(tempObj))
                 } else {

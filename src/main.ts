@@ -9,6 +9,9 @@ export function exportCSVFromJSON(
     params.fileName = params.fileName || undefined;
     if (params.data?.length > 0) {
         const values = getValidData(params)
+        // raise on the error
+        // extra line 1
+        // extra line 2
         if (values?.status === 'error') {
             return console.error(values?.message)
         }

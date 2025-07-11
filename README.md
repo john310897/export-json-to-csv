@@ -7,7 +7,7 @@
 
 The JSON to CSV Converter is a lightweight and efficient npm package designed to seamlessly convert JSON data into CSV format. This tool is particularly useful for developers who need to export or manipulate data in CSV format, a widely accepted standard for data interchange.
 
-[Demo](https://stackblitz.com/edit/vitejs-vite-induwj?file=src%2FApp.jsx)
+demo version [working example](https://john310897.github.io/export-json-to-csv/) (refer the demo folder for the example code in the github repo)
 
 ### Features:
 - **Effortless JSON to CSV Conversion**  

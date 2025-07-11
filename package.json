@@ -8,6 +8,9 @@
   "repository": {
     "url": "https://github.com/john310897/export-json-to-csv.git"
   },
+   "files": [
+    "./dist"
+  ],
   "scripts": {
     "build": "tsup"
   },

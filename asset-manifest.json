@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/export-json-to-csv/static/css/main.22cc8331.css",
+    "main.js": "/export-json-to-csv/static/js/main.0ecc3869.js",
+    "static/js/453.d44e7683.chunk.js": "/export-json-to-csv/static/js/453.d44e7683.chunk.js",
+    "index.html": "/export-json-to-csv/index.html",
+    "main.22cc8331.css.map": "/export-json-to-csv/static/css/main.22cc8331.css.map",
+    "main.0ecc3869.js.map": "/export-json-to-csv/static/js/main.0ecc3869.js.map",
+    "453.d44e7683.chunk.js.map": "/export-json-to-csv/static/js/453.d44e7683.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22cc8331.css",
+    "static/js/main.0ecc3869.js"
+  ]
+}
